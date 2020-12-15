@@ -1,20 +1,34 @@
 <?php
 /*
-Plugin Name: WC GetEmails
-Plugin URI: https://github.com/GetEmails-com/woocommerce_ge_plugin/archive/master.zip
-Description: GetEmails plugin
-Author: Getemails
-Author URI: https://www.getemails.com
-Version: 1.0.0
-Copyright: © 2020 Getemails (email : support@getemails.com)
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+@link              http://example.comhttps://github.com/GetEmails-com/woocommerce_ge_plugin
+@since             1.0.0
+@package           wc_getemails
+
+@wordpress-plugin
+Plugin Name:  WC GetEmails
+Plugin URI:   https://github.com/GetEmails-com/woocommerce_ge_plugin/archive/master.zip
+Description:  GetEmails plugin
+Author:       Getemails
+Author URI:   https://www.getemails.com
+Version:      1.0.0
+Copyright:    © 2020 Getemails (email : support@getemails.com)
+License:      GPL-2.0+
+License URI:  http://www.gnu.org/licenses/gpl-2.0.txt
+Text Domain:  wc-getemails
 */
 
-// Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
+
+/**
+ * Currently plugin version.
+ * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Rename this for your plugin and update it as you release new versions.
+ */
+define( 'WC_GETEMAILS_VERSION', '1.0.0' );
 
 /**
  * Define plugin constants
@@ -38,7 +52,7 @@ if ( ! class_exists( 'WCGetemails' ) ) :
       if ( class_exists( 'WC_Integration' ) ) {
 
         // Include our integration class.
-        require_once GETEMAILS_PATH . '/admin/wc-getemails.php';
+        require_once GETEMAILS_PATH . '/admin/wc-getemails-plugin.php';
         
         // Register the integration.
         add_filter( 'woocommerce_integrations', array( $this, 'add_integration' ) );

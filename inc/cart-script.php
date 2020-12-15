@@ -1,4 +1,19 @@
 <?php
+/**
+ * @link              http://example.comhttps://github.com/GetEmails-com/woocommerce_ge_plugin
+ * @since             1.0.0
+ * @package           wc_getemails
+ *
+ * @package    WC_Getemails
+ * @subpackage WC_Getemails/admin
+ */
+
+/**
+ *
+ * @package    WC_Getemails
+ * @subpackage WC_Getemails/admin
+ * @author     Getemails <https://getemails.com/>
+ */
 
 defined( 'ABSPATH' ) || exit;
 
