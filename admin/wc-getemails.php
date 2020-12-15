@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Integration Demo.
- *
- * @package  Woocommerce Getemails
- * @category Integration
- * @author   Getemails.
- */
-
 defined( 'ABSPATH' ) || exit;
 
 /**
