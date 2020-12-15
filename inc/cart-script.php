@@ -23,8 +23,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
             CompareAtPrice: '" . $product->get_regular_price() . "'
         };
 
-        console.log('add to cart successfully :)')
-
 		geq.page();
 		geq.addToCart(item);
 		
