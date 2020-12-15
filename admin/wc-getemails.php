@@ -22,8 +22,8 @@ require_once GETEMAILS_PATH . '/inc/cart-script.php';
 require_once GETEMAILS_PATH . '/inc/order-script.php';
 
 
-if ( ! class_exists( 'WC_My_plugin_Integration' ) ) :
-  class WC_Getemails extends WC_Integration {
+if ( ! class_exists( 'WC_Getemails_plugin' ) ) :
+  class WC_Getemails_plugin extends WC_Integration {
 
     /**
      * Init and hook in the integration.

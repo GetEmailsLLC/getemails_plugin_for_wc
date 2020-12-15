@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: WooCommerce GetEmails
-Plugin URI: https://www.getemails.com/woocommerce-plugin
+Plugin Name: WC GetEmails
+Plugin URI: https://github.com/GetEmails-com/woocommerce_ge_plugin/archive/master.zip
 Description: GetEmails plugin
 Author: Getemails
 Author URI: https://www.getemails.com
@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 define( 'GETEMAILS_PATH', trailingslashit( plugin_dir_path(__FILE__) ) );
 
-if ( ! class_exists( 'WoocommerceGetemails' ) ) :
-  class WoocommerceGetemails {
+if ( ! class_exists( 'WCGetemails' ) ) :
+  class WCGetemails {
     /**
     * Construct the plugin.
     */
@@ -54,12 +54,12 @@ if ( ! class_exists( 'WoocommerceGetemails' ) ) :
      * Add a new integration to WooCommerce.
      */
     public function add_integration( $integrations ) {
-      $integrations[] = 'WC_Getemails';
+      $integrations[] = 'WC_Getemails_plugin';
       return $integrations;
     }
   }
 
-  $WoocommerceGetemails = new WoocommerceGetemails( __FILE__ );
+  $WCGetemails = new WCGetemails( __FILE__ );
 
   function wc_getemails_action_links( $links ) {
     $links[] = '<a href="'. menu_page_url( MY_PLUGIN_SLUG, false ) .'&tab=integration&section=getemails-integration">Settings</a>';
