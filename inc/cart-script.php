@@ -15,11 +15,12 @@
  * @author     Getemails <https://getemails.com/>
  */
 
-defined( 'ABSPATH' ) || exit;
+namespace Getemails;
 
 /**
  * Check if WooCommerce is active
  */
+
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	function cart_script_template() {
 		$product_id = get_the_ID();

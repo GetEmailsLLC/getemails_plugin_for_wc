@@ -16,7 +16,7 @@
  * @author     Getemails <https://getemails.com/>
  */
 
-defined( 'ABSPATH' ) || exit;
+namespace Getemails;
 
 /**
  * Check if WooCommerce is active
@@ -41,5 +41,3 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		</script>";
     }
 }
-
-
